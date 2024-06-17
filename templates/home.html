@@ -11,16 +11,20 @@
                 height: 560px;
                 width: 100%;
                 object-fit: cover;
+                margin-bottom: 16px;
 
             }   
         </style>
     </head>
     <body>
+        {% include 'nav.html' %}
+        <img class="img-fluid" id="banner" src="/static/fuel.jpg" height="320">
         <div class="container">
             <h1 class="text-center mt-2 mb-4"> {{company_name}} Careers</h1>
-            <img class="img-fluid" id="banner" src="/static/fuel.jpg" height="320">
+            
 
-            <h2 class="text-center mt-2 mb-4">About Kuro</h2>
+                <div class="row" style="margin-bottom: 45px;">
+                        <div class="col-md-6">
                 <p class="lead">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   A quisquam alias architecto sint amet aperiam quod doloremque soluta nam ipsum inventore,
@@ -28,6 +32,10 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat laborum distinctio qui quo unde. 
                   Consequatur ullam optio quibusdam fugit, cum doloribus aspernatur veniam natus dicta error! Eveniet fuga explicabo officia!
                 </p>
+                    </div>
+                    <div class="d-none d-md-block col-md-6"> <img src="/static/lap.jpg" style="height: 320px; border-radius: 4px;"> </div>
+                
+                </div>
 
              <h2 class="text-center mt-2 mb-4">Job Openings</h2>
                 
@@ -39,9 +47,10 @@
                 
                 <div class="text-center">
                     <button class="btn btn-primary btn-lg">Contact Us</button>
-                    <p class="mt-4">Copuright 2024, Kuro</p>
+                    
                 </div>
                 
         </div>
+        {% include 'footer.html' %}
     </body>
 </html>
