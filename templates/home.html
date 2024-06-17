@@ -12,12 +12,12 @@
                 width: 100%;
                 object-fit: cover;
 
-            }
+            }   
         </style>
     </head>
     <body>
         <div class="container">
-            <h1 class="text-center mt-2 mb-4">Kuro Careers</h1>
+            <h1 class="text-center mt-2 mb-4"> {{company_name}} Careers</h1>
             <img class="img-fluid" id="banner" src="/static/fuel.jpg" height="320">
 
             <h2 class="text-center mt-2 mb-4">About Kuro</h2>
@@ -30,8 +30,13 @@
                 </p>
 
              <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-                <p>TODO - Show the jobs here</p>
-
+                
+                    <div>
+                        {% for job in jobs %}
+                            {% include 'jobitem.html' %}
+                        {% endfor %}
+                    </div>
+                
                 <div class="text-center">
                     <button class="btn btn-primary btn-lg">Contact Us</button>
                     <p class="mt-4">Copuright 2024, Kuro</p>
